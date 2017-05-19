@@ -4,10 +4,10 @@ rem Copyright (c) Eugene Gavrilov. 2003-2014. All rights reserved
 
 rem (utils)
 rem set to appropriate folder for storing utilities, e.g. final\sdk\bin
-set UTIL_ROOT=f:\audio\tools\util
-set NSIS_ROOT=f:\audio\tools\nsis
-set HHC_ROOT=f:\audio\tools\hhc
-set DDKROOT=f:\ntddk
+set UTIL_ROOT=d:\audio\ntddk\tools\util
+set NSIS_ROOT=d:\audio\ntddk\tools\nsis
+set HHC_ROOT=d:\audio\ntddk\tools\hhc
+set DDKROOT=d:\audio\ntddk
 
 
 echo --- setting up build environment...
@@ -25,7 +25,7 @@ rem -- user-tweakable defaults
 
 if %BUILD_TYPE%.==. set BUILD_TYPE=CHK
 rem can be: CHK or FRE [c / f for win2k]
-if %TARGET_OS%.==. set TARGET_OS=wxp
+if %TARGET_OS%.==. set TARGET_OS=win7
 rem (should be wnet; also supported: win7, Wlh, WXP, w2k)
 if %TARGET_ARCH%.==. set TARGET_ARCH=x86
 rem architecture: folder name for build_output_dir (should be: x86 or amd64) == used for folder suffix
